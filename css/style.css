@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+#grid {
+    margin: 20px auto;
+    display: table;
+    width: 500px;
+    height: 390px;
+    padding: 10px;
+    background: goldenrod;
+    border: 1px solid #0044AA;
+    border-radius: 5px;
+    border-spacing: 5px 5px;
+  }
+  .row{
+      display: table-row;
+  }
+  .cell{
+    display: table-cell;
+    background-color: #FFFFFF;
+    width: 35px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+   border:  15px;
+  }
