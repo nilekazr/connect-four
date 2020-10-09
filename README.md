@@ -50,12 +50,11 @@ The win conditions
             return players[playerToken-1].hasWon = true;
         }
     }
-} ```
----
+} 
 
 placing checkers in the grid
 
-    ``` let gridArray = [
+     let gridArray = [
         [0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0],
