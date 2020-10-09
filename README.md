@@ -55,7 +55,7 @@ The win conditions
 
 placing checkers in the grid
 
-    ```let gridArray = [
+    ``` let gridArray = [
         [0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0],
@@ -84,7 +84,7 @@ function dropToken(row,col) {
         }
         nextTurn();
     }
-}```
+} ```
 
 ---
 
