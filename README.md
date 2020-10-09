@@ -3,7 +3,7 @@ My game is a connect-four clone with 2 players with different colors and 2 win c
 
 ---
 
-## The Inspo 
+## The inspo 
 I love the game! I have at home and played it since I was a kid. It seemed like a nice balance between dynamic logic in javascript and displaying stuff in html and css. After this project although, I have a new appreciation for the logic that goes into even the simplest games.
 
 ---
