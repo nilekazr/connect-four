@@ -5,7 +5,7 @@ const players = [
     { name: "Player 2", hasWon: false, },
 ]
 let playerToken = 1;
-document.querySelector('h1').innerText = "it's "+players[1].name+"'s Turn!";
+document.querySelector('h1').innerText = "it's "+players[0].name+"'s Turn!";
 // function to create a grid
     let gridArray = [
         [0,0,0,0,0,0,0],
@@ -74,26 +74,27 @@ function nextTurn(){
 }
 // function to check for a win
 function checkWin(row,col,playerToken){
-    let count = 0;
+    let accum = 0;
+    //horizontal win
     for (i=0;i<7;i++){
         if (gridArray[row][i]==gridArray[row][col]){
-            count++;
+            accum++;
         }
         else{
-            count=0;
+            accum=0;
         }
-        if (count>=4){
+        if (accum>=4){
             return players[playerToken-1].hasWon = true;
     }
-}
+}   //vertical win
     for (i=0;i<6;i++){
         if (gridArray[i][col]==gridArray[row][col]){
-        count++;
+        accum++;
         }
         else{
-        count=0;
+        accum=0;
         }
-        if (count>=4){
+        if (accum>=4){
             return players[playerToken-1].hasWon = true;
         }
     }

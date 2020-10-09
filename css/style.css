@@ -5,6 +5,9 @@ body{
 h1{
     text-align: center;
     color: orangered;
+    margin-top: 50px;
+    font-family: 'Creepster', cursive;
+    font-size: 34px;
 }
 #grid {
     margin: 20px auto;
