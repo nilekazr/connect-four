@@ -1,13 +1,19 @@
+body{
+    background-image: url("https://i.pinimg.com/originals/a4/01/e6/a401e64d3dcce762ab81e682853be203.jpg");
+}
+
 h1{
     text-align: center;
+    color: orangered;
 }
 #grid {
     margin: 20px auto;
+    margin-top: 150px;
     display: table;
-    width: 500px;
-    height: 390px;
+    width: 700px;
+    height: 590px;
     padding: 10px;
-    background: goldenrod;
+    background: black;
     border: 1px solid #0044AA;
     border-radius: 5px;
     border-spacing: 5px 5px;
