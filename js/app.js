@@ -1,8 +1,8 @@
 // object for each player
 
 const players = [
-    { name: "bob", hasWon: false, },
-    { name: "jeff", hasWon: false, },
+    { name: "Player 1", hasWon: false, },
+    { name: "Player 2", hasWon: false, },
 ]
 let playerToken = 1;
 document.querySelector('h1').innerText = "it's "+players[1].name+"'s Turn!";
@@ -21,17 +21,23 @@ document.querySelector('h1').innerText = "it's "+players[1].name+"'s Turn!";
 function dropToken(row,col) {
     let gridSpot = gridArray[row][col];
     if((gridArray[row][col]) !== (gridArray[5][col])){
-    if(gridArray[parseInt(row+1)][col] == 0){
+        if(gridArray[parseInt(row+1)][col] == 0){
         return;
-    }
+        }
     }
     if(gridSpot == 0){
         gridArray[row][col]= playerToken;
         checkWin(row,col,playerToken);
+        console.log(players[playerToken-1].hasWon);
         colorswap(row,col);
+        if (players[playerToken-1].hasWon == true){
+            document.querySelector("h1").innerHTML = players[playerToken-1].name + " has won the game! What a sp0o0ky gamer!";
+            return;
+        }
         nextTurn();
     }
 }
+
 
 
 //changing the color of the token
@@ -69,7 +75,7 @@ function nextTurn(){
 // function to check for a win
 function checkWin(row,col,playerToken){
     let count = 0;
-    for (i=0;i<5;i++){
+    for (i=0;i<7;i++){
         if (gridArray[row][i]==gridArray[row][col]){
             count++;
         }
@@ -77,41 +83,18 @@ function checkWin(row,col,playerToken){
             count=0;
         }
         if (count>=4){
-            return players[playerToken-1].name + " has Won!";
+            return players[playerToken-1].hasWon = true;
+    }
+}
+    for (i=0;i<6;i++){
+        if (gridArray[i][col]==gridArray[row][col]){
+        count++;
+        }
+        else{
+        count=0;
+        }
+        if (count>=4){
+            return players[playerToken-1].hasWon = true;
         }
     }
 }
-    
-    /* for (i=0; i < gridArray.length; i++){
-        let innerArray = gridArray[i];
-        for (j=0;j <innerArray.length; j++){
-            while (innerArray[j] ==  1||2){
-                let horizontalWin = 0;
-                horizontalWin++;
-                if (horizontalWin == 4){
-                    winner = true;
-                    break;
-                }
-                else{
-                    break;
-                }
-            }
-        }
-    }
-    for(i=0;i < gridArray.length;i++){
-        let innerArray = gridArray[i];
-        for (j = 0; j < innerArray; j++){
-            while(innerArray[j] == 1||2){
-                if(innerArray[j] == gridArray[i+1][j]){
-                    let verticalWin = 0;
-                    verticalWin++;
-                    if(verticalWin == 4){
-                        winner = true;
-                    }
-                }
-            }
-
-        }
-        
-    }
-*/
